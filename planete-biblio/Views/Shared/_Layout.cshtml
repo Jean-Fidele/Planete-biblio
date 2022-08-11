@@ -9,11 +9,11 @@
     addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } 
 </script>
-<link rel="stylesheet" href="css/bootstrap.css"> 
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> 
-<link rel="stylesheet" href="css/font-awesome.css">
-<link rel="stylesheet" href="css/swipebox.css">
-<link rel="stylesheet" href="css/jquery-ui.css" />
+<link rel="stylesheet" href="~/css/bootstrap.css"> 
+<link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" /> 
+<link rel="stylesheet" href="~/css/font-awesome.css">
+<link rel="stylesheet" href="~/css/swipebox.css">
+<link rel="stylesheet" href="~/css/jquery-ui.css" />
 <!-- online-fonts -->
 <link href="//fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
@@ -22,7 +22,7 @@
     <!-- banner -->
 	<div class="main_section_agile" id="home">
 		<div class="agileits_w3layouts_banner_nav">
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-default navbar-fixed-top">
 				<div class="navbar-header navbar-left">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="sr-only">Toggle navigation</span>
@@ -32,17 +32,16 @@
 					</button>
 				<h1><a class="navbar-brand" href="index.html"><i class="fa fa-leanpub" aria-hidden="true"></i> PLANETE</a></h1>
 				</div>
-			
 				<ul class="agile_forms">
 					<li><a class="active" href="students/index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Connecter</a> </li>
 				</ul>
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2" id="link-effect-2">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="effect-3">Home</a></li>
-							<li><a href="#about" class="effect-3 scroll">A propos de nous</a></li>
-							<li><a href="#services" class="effect-3 scroll">Services</a></li>
-							<li><a href="#mail" class="effect-3 scroll">Contact</a></li>
+							<li class="active"> <a class="effect-3" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+							<li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="About">A propos de nous</a></li>
+							<li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="Service">Services</a></li>
+							<li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
 						</ul>
 					</nav>
 				</div>

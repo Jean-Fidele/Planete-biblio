@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "planete-biblio", "planete-biblio\planete-biblio.csproj", "{1B0208E3-09D6-4FB1-B5B1-182BFF2F4BD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "planete-biblio", "planete-biblio\planete-biblio.csproj", "{1B0208E3-09D6-4FB1-B5B1-182BFF2F4BD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

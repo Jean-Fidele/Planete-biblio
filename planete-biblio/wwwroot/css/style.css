@@ -50,11 +50,12 @@ label{
 }
 /*-- nav --*/
 .main_section_agile {
-    background: #002147;
+	background: #002147;
+	margin-bottom: 50px;
 }
 .navbar-default {
-    background: none;
-    border: none;
+	background: #002147;
+	border: none;
 }
 .navbar {
     margin-bottom: 0;
@@ -94,7 +95,7 @@ label{
 	outline:none;
 }
 nav.navbar.navbar-default {
-    background: none;
+	background: #002147;
 	padding: 1.7em 0 0.2em 0;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
