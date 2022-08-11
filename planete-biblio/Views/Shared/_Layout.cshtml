@@ -33,7 +33,7 @@
 				<h1><a class="navbar-brand" href="index.html"><i class="fa fa-leanpub" aria-hidden="true"></i> PLANETE</a></h1>
 				</div>
 				<ul class="agile_forms">
-					<li><a class="active" href="students/index.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Connecter</a> </li>
+					<li><a class="active" asp-area="" asp-controller="Account" asp-action="Login"><i class="fa fa-sign-in" aria-hidden="true"></i>Connecter</a></li>
 				</ul>
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="link-effect-2" id="link-effect-2">
@@ -51,7 +51,7 @@
 	</div>
     <!-- banner -->
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3" style="margin-top: 50px;">
             @RenderBody()
         </main>
     </div>

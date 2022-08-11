@@ -13,13 +13,13 @@ namespace planete_biblio.Controllers
         {
             _logger = logger;
         }
-
-        [Authorize]
+       
         public IActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public IActionResult About()
         {
             return View();
