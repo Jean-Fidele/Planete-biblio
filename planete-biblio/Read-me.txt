@@ -1,0 +1,16 @@
+---------------------------------------------------------------------------
+
+Install-Package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+Install-Package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Install-Package Microsoft.AspNetCore.Identity.UI
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+
+---------------------------------------------------------------------------
+
+git rm --cached -r planete-biblio/bin
+git rm --cached -r planete-biblio/obj
+git rm --cached -r .vs
+git commit -m "Start ignored bin + obj + .vs"
+
+--------------------------------------------------------------------------
