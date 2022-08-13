@@ -1,24 +1,24 @@
 ﻿
-    <div class="container" >
+    <div class="container">
         <div class="row">
-            <article class="col-xs-12 maincontent">
-                <header class="page-header">
-                    <h1 class="page-title">Se Connecter</h1>
-                </header>
+            <article class="col-xs-12">
+                @*<header class="page-header">
+                    <h1 class="page-title">Vous devez connecter pour acceder a des ressources personnels</h1>
+                </header>*@
 
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                    <div>
+                    <div style="margin-top: 100px">
                         <div class="panel-body">
                             <h3 class="thin text-center">Se Connecter à votre compte</h3>
                             <hr>
                             @using (Html.BeginForm("Login", "Account", FormMethod.Post))
                             { 
                                 <div class="top-margin">
-                                    <label>Nom d'utilisateur <span class="text-danger">*</span></label>
+                                    <label class="form-label" style="font-size: 14px">Nom d'utilisateur <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" autocomplete="off" name="username">
                                 </div>
                                 <div class="top-margin">
-                                    <label>Mot de passe <span class="text-danger">*</span></label>
+                                    <label class="form-label" style="font-size: 14px">Mot de passe <span class="text-danger">*</span></label>
                                     <input type="password" class="form-control" autocomplete="off" name="password">
                                 </div>
 
