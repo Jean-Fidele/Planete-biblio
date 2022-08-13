@@ -1,3 +1,7 @@
 ﻿.vs/*
+planete-biblio/bin
+planete-biblio/obj
+planete-biblio/bin/
+planete-biblio/obj/
 planete-biblio/bin/*
 planete-biblio/obj/*
