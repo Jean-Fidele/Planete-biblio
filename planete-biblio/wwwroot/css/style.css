@@ -173,8 +173,10 @@ div#bs-example-navbar-collapse-1 {
 	-ms-transform: translateX(0);
 }
 .agileits_w3layouts_banner_nav {
-    margin: 0 auto;
-    width: 90%;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 5px;
 }
 ul.agile_forms {
     float: right;
