@@ -14,3 +14,8 @@ git rm --cached -r .vs
 git commit -m "Start ignored bin + obj + .vs"
 
 --------------------------------------------------------------------------
+
+Chargement des donnees livres dans databases
+Chargement des donnees livres dans interface
+Faire fonctionner bare de recherche avec : word key, editor, ecrivain
+Mise a jour base pour avoir les image en binaire

@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Bibliotheque en ligne";
+}
+
+<div class="container-fluid">
+    <div class="d-grid gap-3">
+        <div class="row border p-2">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control form-control-sm" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control form-control-sm" id="inputPassword4">
+            </div>
+        </div>
+
+        <div class="row">
+            <table id="grdDepartement" class="table table-striped border-primary">
+                <thead>
+                    <tr class="d-flex">
+                        <th class="col-md-2 text-center"><input name="checkAll" id="checkAll" type="checkbox" /></th>
+                        <th class="col-md-5">Code</th>
+                        <th class="col-md-5">Intitulé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 1</td>
+                        <td class="col-md-5">Libele 1</td>
+                    </tr>
+                    <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 2</td>
+                        <td class="col-md-5">Libele 2</td>
+                    </tr>
+                     <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 3</td>
+                        <td class="col-md-5">Libele 3</td>
+                    </tr>
+                     <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 4</td>
+                        <td class="col-md-5">Libele 4</td>
+                    </tr>
+                     <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 5</td>
+                        <td class="col-md-5">Libele 5</td>
+                    </tr>
+                     <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 6</td>
+                        <td class="col-md-5">Libele 6</td>
+                    </tr>
+                     <tr class="d-flex">
+                        <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkDepartement' name='chkDepartement[]' value=OID_DEP /></td>
+                        <td class="col-md-5">Code 7</td>
+                        <td class="col-md-5">Libele 7</td>
+                    </tr>
+                </tbody>
+               @* <tfoot>
+                    <tr>
+                        <th class="datatable-nosort" style="text-align:center"><input name="checkAll" id="checkAll" type="checkbox" /></th>
+                        <th>Code</th>
+                        <th>Intitulé</th>
+                    </tr>
+                </tfoot>*@
+            </table>
+        </div>
+    </div>
+</div>
