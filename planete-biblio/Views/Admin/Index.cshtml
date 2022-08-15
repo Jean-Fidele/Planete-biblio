@@ -5,58 +5,60 @@
 @model IEnumerable<planete_biblio.Entities.Categorie>
 
 <div class="container-fluid pt-4">
-    <div class="collapse collapse-horizontal show" style="width:15%; float:left; margin-right: 30px; margin-top: 15px;" id="collapseWidthExample">
+    <div class="collapse collapse-horizontal show" style="float:left; margin-right: 30px; margin-top: 15px;" id="collapseWidthExample">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <small>MATHEMATIQUES</small>
-                    </button>
+                    <a href="#" class="accordion-button collapsed btn btn-sm text-primary" style="font-size: 13px; padding: 0.5rem 1.25rem;" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <small style="padding-right: 10px;">PARAMETRES</small>
+                    </a>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body p-0">
                         <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">Algebre</a>
-                            <a href="#" class="list-group-item list-group-item-action">Probabilite</a>
-                            <a href="#" class="list-group-item list-group-item-action">Statistique</a>
+                            <a href="#" class="list-group-item list-group-item-action">Livre</a>
+                            <a href="#" class="list-group-item list-group-item-action">Auteur</a>
+                            <a href="#" class="list-group-item list-group-item-action">Editeur</a>
+                            <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Categorie" asp-action="Index">Categorie</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        PHYSIQUE
-                    </button>
+                    <a href="#" class="accordion-button collapsed btn btn-sm text-primary"  style="font-size: 13px; padding: 0.5rem 1.25rem;" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         <small style="padding-right: 10px;">USERS/ROLES</small>
+                    </a>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body p-0">
                         <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">Electricite</a>
-                            <a href="#" class="list-group-item list-group-item-action">Mecanique</a>
-                            <a href="#" class="list-group-item list-group-item-action">Quantique</a>
+                            <a href="#" class="list-group-item list-group-item-action">Utilisateur</a>
+                            <a href="#" class="list-group-item list-group-item-action">Role</a>
+                            <a href="#" class="list-group-item list-group-item-action">Utilisateur/Role</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed btn btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        FRANCAIS
-                    </button>
+                    <a href="#" class="accordion-button collapsed btn btn-sm text-primary"  style="font-size: 13px; padding: 0.5rem 1.25rem;" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                         <small style="padding-right: 10px;">CONFIGURATION</small>
+                    </a>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
+                    <div class="accordion-body p-0">
                         <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action">Orale</a>
-                            <a href="#" class="list-group-item list-group-item-action">Orthographe</a>
-                            <a href="#" class="list-group-item list-group-item-action">Grammaire</a>
+                            <a href="#" class="list-group-item list-group-item-action">Pays</a>
+                            <a href="#" class="list-group-item list-group-item-action">Langue</a>
+                            <a href="#" class="list-group-item list-group-item-action">Status</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="p-4" style="display:inline;">
         <div class="row">
             <div class="col-md-5">
