@@ -4,41 +4,45 @@
     ViewData["Title"] = "Bibliotheque en ligne";
 }
 
-@model IEnumerable<planete_biblio.Entities.Categorie>
+@model IEnumerable<planete_biblio.Entities.Livre>
 
 <div class="p-4" style="display:inline;">
     <div class="row">
         <div class="col-md-5">
-            <a  href="#" class="text-primary" style="font-size: 16px;" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Categorie d'une livre</a>
+            <a  href="#" class="text-primary" style="font-size: 16px;" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Liste des livres</a>
         </div>
     </div>
     <div class="d-grid gap-3">
         <div class="row border p-2">
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Code</label>
-                <input type="text" class="form-control form-control-sm" id="inp10">
+                <label for="inputNumero" class="form-label">Code</label>
+                <input type="text" class="form-control form-control-sm" id="inputNumero">
             </div>
             <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Intitule</label>
-                <input type="text" class="form-control form-control-sm" id="inp11">
+                <label for="inputTitre" class="form-label">Intitule</label>
+                <input type="text" class="form-control form-control-sm" id="inputTitre">
             </div>
         </div>
         <div class="row">
-            <table id="grdLivre" class="table table-striped border-primary">
+            <table id="grdLivre" class="table table-responsive table-striped border-primary w-100">
                 <thead>
-                    <tr class="d-flex">
-                        <th class="col-md-2 text-center"><input name="checkAll" id="checkAll" type="checkbox" /></th>
-                        <th class="col-md-5">Code</th>
-                        <th class="col-md-5">Intitulé</th>
+                    <tr class="">
+                        <th class="text-center"><input name="checkAll" id="checkAll" type="checkbox" /></th>
+                        <th class="">Numero</th>
+                        <th class="">Titre</th>
+                        <th class="">Langue</th>
+                        <th class="">Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach (var item in Model)
                     {
-                        <tr class="d-flex">
-                            <td class="col-md-2 text-center"><input type='checkbox' class='droit' id='chkCategorie' name='chkCategorie[]' value=OID_CAT /></td>
-                            <td class="col-md-5">@item.CategorieId</td>
-                            <td class="col-md-5">@item.Libelle</td>
+                        <tr>
+                            <td class="text-center"><input type='checkbox' class='droit' id='chkCategorie' name='chkCategorie[]' value=OID_CAT /></td>
+                            <td class="">@item.Numero_identite</td>
+                            <td class="">@item.Titre</td>
+                            <td class="">@item.Langue</td>
+                            <td class="">@item.Description</td>
                         </tr>
                     }
                 </tbody>

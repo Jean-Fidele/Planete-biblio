@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using planete_biblio.Data;
 using planete_biblio.Models;
 using System.Diagnostics;
 
@@ -8,10 +9,14 @@ namespace planete_biblio.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ApplicationDbContext ctx;
+        private Microsoft.AspNetCore.Hosting.IWebHostEnvironment Environment;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext ctx, Microsoft.AspNetCore.Hosting.IWebHostEnvironment Environment)
         {
             _logger = logger;
+            this.ctx = ctx;
+            this.Environment = Environment;
         }
        
         public IActionResult Index()
@@ -32,7 +37,9 @@ namespace planete_biblio.Controllers
 
         public IActionResult Service()
         {
-            return View();
+
+            ViewData["data"] = Environment.WebRootPath;
+            return View(ctx.Livre.ToList());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
