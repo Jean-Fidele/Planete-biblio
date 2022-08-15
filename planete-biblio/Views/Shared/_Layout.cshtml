@@ -15,13 +15,15 @@
     <link rel="stylesheet" href="~/css/font-awesome.css">
     <link rel="stylesheet" href="~/css/swipebox.css">
     <link rel="stylesheet" href="~/css/jquery-ui.css" />
+
+     <link rel="stylesheet" href="~/startbootstrap/css/styles.css" type="text/css" media="all" />
     <!-- online-fonts -->
     <link href="//fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,latin-ext" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
     <!-- banner -->
-    <div class="main_section_agile" id="home">
+    <div class="main_section_agile fixed-top" id="home">
         <div class="agileits_w3layouts_banner_nav ">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -36,7 +38,7 @@
                                 <li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="About">A propos de nous</a></li>
                                 <li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                                 <li><a class="effect-3" asp-area="" asp-controller="Home" asp-action="Service">Services</a></li>
-                                <li><a class="effect-3" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a></li>
+                                <li><a class="effect-3" asp-area="" asp-controller="Categorie" asp-action="Index">Admin</a></li>
                             </ul>
                         </nav>
 
@@ -50,8 +52,8 @@
         </div>
     </div>
     <!-- banner -->
-    <div class="container-fluid">
-        <main role="main" class="pb-3" style="margin-top: 50px;">
+    <div class="container-fluid mt-5">
+        <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>

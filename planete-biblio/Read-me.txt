@@ -1,4 +1,4 @@
----------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 Install-Package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 Install-Package Microsoft.AspNetCore.Identity.EntityFrameworkCore
@@ -6,16 +6,26 @@ Install-Package Microsoft.AspNetCore.Identity.UI
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 Install-Package Microsoft.EntityFrameworkCore.Tools
 
----------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 git rm --cached -r planete-biblio/bin
 git rm --cached -r planete-biblio/obj
 git rm --cached -r .vs
 git commit -m "Start ignored bin + obj + .vs"
 
---------------------------------------------------------------------------
+----------------------------------- TACHE 1 ---------------------------------------
 
 Chargement des donnees livres dans databases
 Chargement des donnees livres dans interface
 Faire fonctionner bare de recherche avec : word key, editor, ecrivain
 Mise a jour base pour avoir les image en binaire
+
+------------------------------------ TACHE 2 --------------------------------------
+
+Ajout de menu a gauche du page admin
+Utiliser npm pour les script ou css dans le fichier wwwroot/lib pour les package
+Enlever wwwroot/lib dans la liste des package gerer par git
+
+-----------------------------------------------------------------------------------
+
+Download package explain : it not find in the project asp net core vs 2022

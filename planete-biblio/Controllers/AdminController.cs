@@ -1,14 +1,22 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using planete_biblio.Data;
 
 namespace planete_biblio.Controllers
 {
     public class AdminController : Controller
     {
+        private readonly ApplicationDbContext ctx;
+
+        public AdminController(ApplicationDbContext ctx)
+        {
+            this.ctx = ctx;
+        }
+
         // GET: AdminController
         public ActionResult Index()
         {
-            return View();
+            return View(ctx.Categorie.ToList());
         }
 
         // GET: AdminController/Details/5
