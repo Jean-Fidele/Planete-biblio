@@ -5,6 +5,26 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\planete-biblio</_PublishTargetUrl>
-    <History>True|2022-08-15T07:32:53.3821141Z;False|2022-08-15T09:32:33.8019191+02:00;True|2022-08-14T23:57:36.8666563+02:00;True|2022-08-14T15:48:30.5536971+02:00;True|2022-08-14T11:48:41.5546018+02:00;True|2022-08-14T03:33:48.3356391+02:00;True|2022-08-14T01:14:48.1792660+02:00;False|2022-08-14T01:14:29.7671575+02:00;True|2022-08-14T00:36:37.7694457+02:00;True|2022-08-13T21:00:03.4558571+02:00;True|2022-08-13T20:59:47.9240211+02:00;False|2022-08-13T20:59:11.4650082+02:00;True|2022-08-13T19:26:08.3831160+02:00;False|2022-08-13T19:23:36.7396336+02:00;</History>
+    <History>True|2022-08-15T18:23:03.1896880Z;True|2022-08-15T09:32:53.3821141+02:00;False|2022-08-15T09:32:33.8019191+02:00;True|2022-08-14T23:57:36.8666563+02:00;True|2022-08-14T15:48:30.5536971+02:00;True|2022-08-14T11:48:41.5546018+02:00;True|2022-08-14T03:33:48.3356391+02:00;True|2022-08-14T01:14:48.1792660+02:00;False|2022-08-14T01:14:29.7671575+02:00;True|2022-08-14T00:36:37.7694457+02:00;True|2022-08-13T21:00:03.4558571+02:00;True|2022-08-13T20:59:47.9240211+02:00;False|2022-08-13T20:59:11.4650082+02:00;True|2022-08-13T19:26:08.3831160+02:00;False|2022-08-13T19:23:36.7396336+02:00;</History>
   </PropertyGroup>
+  <ItemGroup>
+    <File Include="wwwroot/images/01/001.jpg">
+      <publishTime>08/13/2022 04:52:35</publishTime>
+    </File>
+    <File Include="wwwroot/images/01/002.jpg">
+      <publishTime>08/13/2022 04:51:03</publishTime>
+    </File>
+    <File Include="wwwroot/images/01/003.jpg">
+      <publishTime>08/13/2022 04:51:19</publishTime>
+    </File>
+    <File Include="wwwroot/images/01/004.jpg">
+      <publishTime>08/13/2022 04:52:32</publishTime>
+    </File>
+    <File Include="wwwroot/images/01/005.jpg">
+      <publishTime>08/13/2022 04:52:28</publishTime>
+    </File>
+    <File Include="wwwroot/images/01/006.png">
+      <publishTime>08/13/2022 04:50:49</publishTime>
+    </File>
+  </ItemGroup>
 </Project>
