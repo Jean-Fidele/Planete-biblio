@@ -1,3 +1,6 @@
-﻿.vs/*
+.vs/*
 **/bin
 **/obj
+planete-biblio/wwwroot/CallRecord/
+planete-biblio/Models/Exercice.cs
+planete-biblio/Data/ModelBuilderExtensions.cs
