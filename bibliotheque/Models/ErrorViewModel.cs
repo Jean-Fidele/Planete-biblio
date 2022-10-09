@@ -1,4 +1,4 @@
-namespace bibliotheque.Models
+namespace Bibliotheque.Models
 {
     public class ErrorViewModel
     {

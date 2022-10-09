@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Bibliotheque en ligne";
+}
+
+@model Domain.Entities.Livre
+
+<div class="container-fluid  pt-4">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9">
+            @using (Html.BeginForm("Create","Categorie", FormMethod.Post))
+            {
+                @Html.ValidationSummary(true, "Le formulaire comporte des erreurs.")
+                <div class="mb-3">
+                    <label for="Code" class="form-label">Titre <span style="color:Red">*</span></label>
+                    @Html.TextBoxFor(model => model.Titre, new { @class = "form-control form-control-sm upper", @maxlength = "10", style = "width:100px" })
+                    <div class="form-text">
+                        @Html.ValidationMessageFor(model => model.Titre)
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="Libelle" class="form-label">Intitulé <span style="color:Red">*</span></label>
+                    @Html.TextBoxFor(model => model.Date_edition, new { @class = "form-control form-control-sm", @maxlength = "30" })
+                    <div class="form-text">
+                        @Html.ValidationMessageFor(model => model.Date_edition)
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-default" id="ajout">
+                        <i class="fa fa-check fa-fw" style="color: #3c8dbc;"></i> Enregistrer
+                    </button> |
+                    @Html.ActionLink("Retour", "Index")
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+ @section Scripts {
+     <script type="text/javascript" src="~/lib/DataTables/DataTables-1.12.1/js/jquery.dataTables.js"></script>
+     <script type="text/javascript" src="~/lib/DataTables/DataTables-1.12.1/js/dataTables.bootstrap5.js"></script>
+     <script type="text/javascript" src="~/lib/DataTables/ColReorder-1.5.6/js/dataTables.colReorder.js"></script>
+
+      <script type="text/javascript">
+           $(document).ready(function() {
+                
+                var table = $('#grdLivre').DataTable({  
+                    "pageLength": 5,
+                    "lengthMenu": [ 5, 10, 15, 20, 25 ],
+                    "bLengthChange": false,
+                    "columnDefs": [{ targets: [0], sortable: false }],
+                    "order": [[1, "asc"]],
+                    "oLanguage": { "sProcessing":   "Traitement en cours...",
+                                   "sLengthMenu":   "Afficher _MENU_ éléments",
+                                   "sZeroRecords":  "Aucun élément à afficher",
+                                   "sInfo": "Affichage de l'élement _START_ à _END_ sur _TOTAL_ éléments",
+                                   "sInfoEmpty": "Affichage de l'élement 0 à 0 sur 0 éléments",
+                                   "sInfoFiltered": "(filtré de _MAX_ éléments au total)",
+                                   "sInfoPostFix":  "",
+                                   "sSearch":       "Rechercher:",
+                                   "sUrl":          "",
+                                   "oPaginate": {
+                                                "sFirst":    "Premier",
+                                                "sPrevious": "Précédent",
+                                                "sNext":     "Suivant",
+                                                "sLast":     "Dernier"
+                                                }
+                                 },
+                    "autoWidth": false
+                });
+
+                $(".dataTables_filter").hide();
+                $(".dataTables_info").hide();
+                $('.pagination').addClass("pull-right");
+           });
+      </script>
+ }

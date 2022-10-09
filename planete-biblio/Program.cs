@@ -1,14 +1,11 @@
+using Bibliotheque.IntefaceMethode;
+using Data.Context;
+using Domain.Entities;
 using Hangfire;
 using Hangfire.Storage.SQLite;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using planete_biblio.Data;
-using planete_biblio.Entities;
-using planete_biblio.IntefaceMethode;
-using planete_biblio.Job;
 using planete_biblio.Middle;
-using planete_biblio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
