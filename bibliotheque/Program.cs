@@ -7,6 +7,7 @@ using Hangfire.Storage.SQLite;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Synchonisation.Job;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
@@ -36,11 +37,12 @@ builder.Services.AddHangfireServer();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Add Identity to the container.
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
+                 options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Add MediatR to the Assembly containg autor.
-builder.Services.AddMediatR(typeof(Auteur));
+builder.Services.AddMediatR(typeof(Facade.Contact.GetContact));
 
 // Add AddAutoMapper to the container.
 builder.Services.AddAutoMapper(config =>
@@ -58,6 +60,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 // Injection de dependance :  transcient + scoped + singletaon
+/*
 builder.Services.AddScoped<Fidele, Denis>();
 builder.Services.AddConfigGroup(builder.Configuration)
                 .AddMyDependencyGroup();
@@ -67,6 +70,7 @@ builder.Services.Configure<MyOptions>(options =>
     options.opt1 = 1;
     options.opt2 = 2;
 });
+*/
 
 // Create the service 
 var app = builder.Build();
@@ -82,8 +86,8 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseHangfireDashboard();
-app.UseRequestCulture();
-app.UseRequestDenis();
+//app.UseRequestCulture();
+//app.UseRequestDenis();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
