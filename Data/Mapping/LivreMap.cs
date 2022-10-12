@@ -20,8 +20,9 @@ namespace Data.Mapping
             builder.Property(x => x.Description);
             builder.Property(x => x.Prix_achat);
 
-            //builder.HasOne(x => x.Categorie).WithMany(x => x.Livres)
-            //    .HasForeignKey(x => x.CategorieId);
+            builder.HasOne(x => x.Categorie)
+                   .WithMany(x => x.Livres)
+                   .HasForeignKey(x => x.CategorieId);
         }
     }
 }

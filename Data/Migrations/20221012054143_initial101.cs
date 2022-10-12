@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Data.Migrations
 {
-    public partial class initial000 : Migration
+    public partial class initial101 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -214,7 +214,7 @@ namespace Data.Migrations
                     Date_edition = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Prix_achat = table.Column<double>(type: "float", nullable: false),
-                    CategorieId = table.Column<int>(type: "int", nullable: true)
+                    CategorieId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -223,7 +223,8 @@ namespace Data.Migrations
                         name: "FK_Livre_Categorie_CategorieId",
                         column: x => x.CategorieId,
                         principalTable: "Categorie",
-                        principalColumn: "CategorieId");
+                        principalColumn: "CategorieId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

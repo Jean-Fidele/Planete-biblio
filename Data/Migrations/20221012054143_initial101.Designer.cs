@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221011173432_initial000")]
-    partial class initial000
+    [Migration("20221012054143_initial101")]
+    partial class initial101
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -178,7 +178,7 @@ namespace Data.Migrations
                     b.Property<string>("Numero_identite")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("CategorieId")
+                    b.Property<int>("CategorieId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Date_edition")
@@ -342,9 +342,13 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.Livre", b =>
                 {
-                    b.HasOne("Domain.Entities.Categorie", null)
+                    b.HasOne("Domain.Entities.Categorie", "Categorie")
                         .WithMany("Livres")
-                        .HasForeignKey("CategorieId");
+                        .HasForeignKey("CategorieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categorie");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

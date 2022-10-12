@@ -17,11 +17,11 @@
         // Foreign keys
         public int EditeurId { get; set; }
         public Editeur Editeur { get; set; }
+          */
 
         // Foreign keys
         public int CategorieId { get; set; }
         public virtual Categorie Categorie { get; set; }
-        */
     }
 
 }
