@@ -1,5 +1,6 @@
 ﻿using Bibliotheque.Models;
 using Data.Context;
+using Domain.Entities;
 using Facade.Contact;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -44,7 +45,7 @@ namespace Bibliotheque.Controllers
         public IActionResult Service()
         {
             ViewData["data"] = _Environment.WebRootPath;
-            return View(_ctx.Livre.ToList());
+            return View(_ctx.Set<Livre>().ToList());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -16,7 +16,7 @@ namespace Bibliotheque.Controllers
 
         public IActionResult Index()
         {
-            return View(ctx.Livre.ToList());
+            return View(ctx.Set<Livre>().ToList());
         }
 
         public IActionResult Create()
@@ -34,7 +34,7 @@ namespace Bibliotheque.Controllers
 
             try
             {
-                ctx.Livre.Add(livre);
+                ctx.Set<Livre>().Add(livre);
                 ctx.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }

@@ -3,12 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    [Table("Categorie")]
     public class Categorie
     {
-        [Key]
-        public String CategorieId { get; set; }
-
+        public int CategorieId { get; set; }
         public String Libelle { get; set; }
+        public virtual ICollection<Livre> Livres { get; set; }
     }
 }

@@ -17,7 +17,7 @@ builder.Services.AddControllersWithViews();
 
 // Add Context to the container.
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString)
+    options.UseSqlServer(connectionString, x => x.MigrationsAssembly("Data"))
            .LogTo(Console.WriteLine, LogLevel.Information)
 );
 

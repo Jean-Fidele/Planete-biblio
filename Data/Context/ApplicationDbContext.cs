@@ -1,7 +1,8 @@
-﻿using Domain.Entities;
+﻿using Data.Mapping;
+using Domain.Entities;
+using EntityFrameworkCore.SqlServer.JsonExtention;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 
 namespace Data.Context
 {
@@ -12,16 +13,13 @@ namespace Data.Context
         {
         }
 
-        
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.ApplyConfiguration(new AuteurMap());
+            builder.ApplyConfiguration(new CategorieMap());
+            builder.ApplyConfiguration(new EditeurMap());
+            builder.ApplyConfiguration(new LivreMap());
             base.OnModelCreating(builder);
-            builder.Seed();
         }
-
-        public DbSet<Livre> Livre { get; set; }
-        public DbSet<Editeur> Editeur { get; set; }
-        public DbSet<Auteur> Auteur { get; set; }
-        public DbSet<Categorie> Categorie { get; set; }
     }
 }

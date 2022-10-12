@@ -1,4 +1,5 @@
 ﻿using Data.Context;
+using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace planete_biblio.Controllers
         // GET: AdminController
         public ActionResult Index()
         {
-            return View(ctx.Categorie.ToList());
+            return View(ctx.Set<Categorie>().ToList());
         }
 
         // GET: AdminController/Details/5

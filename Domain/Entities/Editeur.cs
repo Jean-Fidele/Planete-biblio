@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities
 {
-    [Table("Editeur")]
     public class Editeur
     {
-        [Key]
         public String EditeurId { get; set; }
 
         public String Nom { get; set; }

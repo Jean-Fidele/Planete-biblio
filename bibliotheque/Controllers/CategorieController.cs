@@ -14,7 +14,7 @@ namespace planete_biblio.Controllers
 
         public IActionResult Index()
         {
-            return View(ctx.Categorie.ToList());
+            return View(ctx.Set<Categorie>().ToList());
         }
 
         public IActionResult Create()
@@ -31,7 +31,7 @@ namespace planete_biblio.Controllers
 
             try
             {
-                ctx.Categorie.Add(categorie);
+                ctx.Set<Categorie>().Add(categorie);
                 ctx.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
