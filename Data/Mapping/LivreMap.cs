@@ -15,7 +15,7 @@ namespace Data.Mapping
         {
             builder.HasKey(x => x.Numero_identite);
             builder.Property(x => x.Date_edition);
-            builder.Property(x => x.Titre);
+            builder.Property(x => x.Titre).IsRequired();
             builder.Property(x => x.Langue);
             builder.Property(x => x.Description);
             builder.Property(x => x.Prix_achat);
