@@ -1,4 +1,6 @@
-﻿namespace Domain.Entities
+﻿using System.Text.Json;
+
+namespace Domain.Entities
 {
     public class Livre
     {
@@ -22,6 +24,10 @@
         // Foreign keys
         public int CategorieId { get; set; }
         public virtual Categorie Categorie { get; set; }
+        public string Concatenation
+        {
+            get { return JsonDocument.Parse(this.Description).RootElement.GetProperty("Name").ToString(); }  
+        }
     }
 
 }
